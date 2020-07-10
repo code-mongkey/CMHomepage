@@ -1,3 +1,11 @@
 ﻿@page "/"
 
-<h1>CODE-MONKEY</h1>
+@inject NavigationManager NavigationManagerInjector
+
+@code{
+
+    protected override void OnInitialized()
+    {
+        NavigationManagerInjector.NavigateTo("/Home", true);
+    }
+}
